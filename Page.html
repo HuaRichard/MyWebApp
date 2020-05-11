@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  </head>
+  <body>
+    <p>Hello World</p>
+    
+    <div class="container">
+      <?!= multipleChoice()?>
+      <div id="test"></div>
+      <div class="row">
+
+        <div class="col s4">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perspiciatis corporis accusamus obcaecati. Omnis nulla rerum suscipit molestias doloremque facere eligendi enim? Perspiciatis quae, voluptatum hic iusto quisquam id minus?</p>
+        </div>
+
+        <div class="col s8">
+          <form>
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" value="Red" checked />
+                <span>Red</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" value="Yellow" />
+                <span>Yellow</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input class="with-gap" name="group1" type="radio" value="Green" />
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perspiciatis corporis accusamus obcaecati. Omnis nulla rerum suscipit molestias doloremque facere eligendi enim? Perspiciatis quae, voluptatum hic iusto quisquam id minus?</span>
+              </label>
+            </p>
+          </form>
+        </div>        
+
+      </div>
+    </div>
+
+    <script>
+      google.script.run.withSuccessHandler(rdr).renderMultipleChoice();
+      function rdr(a) {
+        document.getElementById("test").innerHTML = a;
+        console.log(a);
+      }
+      // document.getElementById("test").innerHTML = "<div><div>test test test</div><p>TEST</p></div>"
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
+
+
